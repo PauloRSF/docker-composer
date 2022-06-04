@@ -2,6 +2,7 @@
   "name": "docker-composer",
   "private": true,
   "version": "0.0.1",
+  "author": "PauloRSF <paulorsouzaf@gmail.com>",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,8 +12,11 @@
     "lint:fix": "eslint --fix src/"
   },
   "dependencies": {
+    "grommet": "2.23.0",
+    "grommet-icons": "4.7.0",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "styled-components": "5.3.5"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.4",
