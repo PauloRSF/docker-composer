@@ -1,20 +1,14 @@
-import { Page, PageContent, Main } from 'grommet';
+import { Grommet } from 'grommet';
 
-import { Header } from '../components/header';
-import { ServicesList } from '../components/services-list';
+import { DialogContextProvider } from '../contexts/dialog';
+import { DialogOverlay } from '../components/dialog';
+import { HomePage } from '../pages/home';
 
 export const App = () => (
-  <Page fill>
-    <Header />
-    <PageContent fill>
-      <Main
-        fill
-        justify="center"
-        direction="row"
-        pad={{ vertical: 'xlarge', horizontal: 'medium' }}
-      >
-        <ServicesList width={{ max: '500px' }} services={[]} />
-      </Main>
-    </PageContent>
-  </Page>
+  <Grommet full>
+    <DialogContextProvider>
+      <HomePage />
+      <DialogOverlay />
+    </DialogContextProvider>
+  </Grommet>
 );
